@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
-public class Books {
+public class Book {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,11 +22,11 @@ public class Books {
 	@NotBlank(message = "Required")
 	private String about;
 
-	public Books() {
+	public Book() {
 		
 	}
 
-	public Books(Integer id, @NotBlank(message = "Name Required") String name,
+	public Book(Integer id, @NotBlank(message = "Name Required") String name,
 			@NotBlank(message = "Author Required") String author, @NotBlank(message = "Required") String about) {
 		this.id = id;
 		this.name = name;
